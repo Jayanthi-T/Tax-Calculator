@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--<html>-->
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Bill Counter</title>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+    <a class="navbar-brand" href="#">Welcome to Our Department Store :</a>
+</nav>
+
+    <h1>Total Price and Total Tax</h1>
+    <p th:text="${productList.getTotalPriceReceipt()}"></p>
+
+    <p th:text="${productList.getTotalTaxReceipt()}"></p>
+</body>
+</html>
+
+
+<!--package com.example.BillingSystem.service.impl;-->
+
+<!--import com.example.BillingSystem.entity.ProductList;-->
+<!--import com.example.BillingSystem.repository.ProductRepository;-->
+<!--import com.example.BillingSystem.service.ProductService;-->
+<!--import org.springframework.beans.factory.annotation.Autowired;-->
+<!--import org.springframework.stereotype.Service;-->
+
+<!--import java.util.List;-->
+
+<!--@Service-->
+<!--public class ProductServiceImpl implements ProductService {-->
+
+<!--@Autowired-->
+<!--private ProductRepository productRepository;-->
+
+<!--public ProductServiceImpl(ProductRepository productRepository) {-->
+<!--super();-->
+<!--this.productRepository = productRepository;-->
+<!--}-->
+
+<!--@Override-->
+<!--public  Double calTax(){-->
+
+<!--Double total_tax = 0.0;-->
+<!--Double total_price = 0.0;-->
+<!--Double taxPerProduct = 0.0;-->
+
+<!--List<ProductList> productLists = getAllProducts();-->
+<!--    productLists.forEach(data-> {-->
+<!--    if (data.getProductType().contains("imported")) {-->
+<!--    if (data.getProductType().contains("book") || data.getProductType().contains("food") || data.getProductType().contains("medicine")) {-->
+<!--    taxPerProduct = data.getUnitPrice() * 0.05;-->
+<!--    data.getUnitPrice() = (data.getUnitPrice() + taxPerProduct) * data.getQuantity();-->
+<!--    total_tax += (taxPerProduct * data.getQuantity());-->
+<!--    total_price += data.getUnitPrice();-->
+<!--    }-->
+<!--    else {-->
+<!--    taxPerProduct = data.getUnitPrice() * 0.15;-->
+<!--    data.getUnitPrice() = (data.getUnitPrice() + taxPerProduct)*data.getQuantity();-->
+<!--    total_tax += (taxPerProduct * data.getQuantity());-->
+<!--    total_price += data.getUnitPrice();-->
+<!--    }-->
+<!--    }-->
+<!--    else {-->
+<!--    if (data.getProductType().contains("book") || data.getProductType().contains("food") || data.getProductType().contains("medicine")) {-->
+<!--    data.getUnitPrice() = (data.getUnitPrice() * data.getQuantity());-->
+<!--    total_price += data.getUnitPrice();-->
+<!--    }-->
+<!--    else {-->
+<!--    taxPerProduct = data.getUnitPrice() * 0.10;-->
+<!--    data.getUnitPrice() = (data.getUnitPrice() + taxPerProduct)*data.getQuantity();-->
+<!--    total_tax += (taxPerProduct * data.getQuantity());-->
+<!--    total_price += data.getUnitPrice();-->
+<!--    }-->
+<!--    }-->
+
+<!--    });-->
+
+<!--    return total_price;-->
+
+<!--    }-->
+<!--    }-->
+
+<!--    @Override-->
+<!--    public ProductList insert(ProductList productList){-->
+<!--    return productRepository.save(productList);-->
+<!--    }-->
+
+<!--    @Override-->
+<!--    public List<ProductList> getAllProducts() {-->
+<!--        return productRepository.findAll();-->
+<!--        }-->
+
+<!--        @Override-->
+<!--        public ProductList getProductById(Long id) {-->
+<!--        return productRepository.findById(id).get();-->
+<!--        }-->
+
+<!--        @Override-->
+<!--        public ProductList saveProduct(ProductList productList) {-->
+<!--        return productRepository.save(productList);-->
+<!--        }-->
+
+<!--        @Override-->
+<!--        public void deleteProductById(Long id) {-->
+<!--        productRepository.deleteById(id);-->
+<!--        }-->
+
+<!--        }-->
