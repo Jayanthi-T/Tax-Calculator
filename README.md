@@ -23,7 +23,7 @@ The rounding rulesfor sales tax are that for a tax rate of n%, a shelf price of 
 
 ### Installing and Modifications
 
-* Clone the "Billling System in Spring Boot" folder
+* Clone the "Billling System Postman" folder
 * Change the sql username and password in "application.properties" according to your mysql installation
 
 ### Executing the Program
