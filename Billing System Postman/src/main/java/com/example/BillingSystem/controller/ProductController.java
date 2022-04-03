@@ -47,12 +47,16 @@ public class ProductController {
         return productService.calculateTotalTax();
     }
 
-    // handler method to handle delete product request
+   // handler method to handle delete product request
     @DeleteMapping("/products/{id}")
     public String deleteProduct(@PathVariable Long id) {
-        productService.deleteProductById(id);
-        return "Deleted the record successfully!";
+        if(productService.isProductExists(id)) {
+            productService.deleteProductById(id);
+            return "Deleted the record successfully!";
+        }
+        else {
+            return "No such product to delete,that is added to your bill!";
+        }
     }
-
 
 }
