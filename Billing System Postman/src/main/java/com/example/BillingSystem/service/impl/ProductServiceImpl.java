@@ -34,6 +34,11 @@ public class ProductServiceImpl implements ProductService {
     public ProductList getProductById(Long id) {
         return productRepository.findById(id).get();
     }
+    
+    @Override
+    public boolean isProductExists(Long id){
+        return productRepository.existsById(id);
+    }
 
     @Override
     public ProductList saveProduct(ProductList productList) {
