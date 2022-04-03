@@ -10,6 +10,4 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends JpaRepository<ProductList, Long> {
 
-//    Double getTotalPriceReceipt();
-//    Double getTotalTaxReceipt();
 }
