@@ -8,6 +8,8 @@ public interface ProductService {
     ProductList insert(ProductList productList);
 
     List<ProductList> getAllProducts();
+    
+    boolean isProductExists(Long id);
 
     ProductList saveProduct(ProductList productList);
 
