@@ -47,12 +47,12 @@ This POST request returns the Tax and Price of the product that is newly added.
 localhost:8080/products/{id}
 ```
 
-### GET Endpoint to Calculate the TotalPrice
+### GET Endpoint to Calculate the Total Price
 ```
 localhost:8080/TotalPrice
 ```
 
-### GET Endpoint to Calculate the TotalTax
+### GET Endpoint to Calculate the Total Tax
 ```
 localhost:8080/TotalTax
 ```
