@@ -52,10 +52,10 @@ public class ProductController {
     public String deleteProduct(@PathVariable Long id) {
         if(productService.isProductExists(id)) {
             productService.deleteProductById(id);
-            return "Deleted the record successfully!";
+            return "Deleted the Product successfully!";
         }
         else {
-            return "No such product to delete from your bill!";
+            return "No such Product to delete from your bill!";
         }
     }
 
