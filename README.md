@@ -32,27 +32,27 @@ The rounding rulesfor sales tax are that for a tax rate of n%, a shelf price of 
 * Now run the project as spring boot application
 * Go to Postman and test the endpoints
 
-* GET Endpoint 
+### GET Endpoint 
 ```
 localhost:8080/products
 ```
-* POST Endpoint
+### POST Endpoint
 ```
 localhost:8080/products/new
 ```
 This POST request returns the Tax and Price of the product that is newly added.
 
-* DELETE Endpoint
+### DELETE Endpoint
 ```
 localhost:8080/products/{id}
 ```
 
-* GET Endpoint to calculate the TotalPrice
+### GET Endpoint to calculate the TotalPrice
 ```
 localhost:8080/TotalPrice
 ```
 
-* GET Endpoint to calculate the TotalTax
+### GET Endpoint to calculate the TotalTax
 ```
 localhost:8080/TotalTax
 ```
