@@ -55,7 +55,7 @@ public class ProductController {
             return "Deleted the record successfully!";
         }
         else {
-            return "No such product to delete,that is added to your bill!";
+            return "No such product to delete from your bill!";
         }
     }
 
