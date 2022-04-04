@@ -36,13 +36,14 @@ The rounding rulesfor sales tax are that for a tax rate of n%, a shelf price of 
 ```
 localhost:8080/products
 ```
-This GET request displays all the products available in the database.
+This GET request displays all the products available in the database in JSON format.
 
 ### POST Endpoint
 ```
 localhost:8080/products/new
 ```
-This POST request returns the Tax and Price of the product that is newly added.
+This POST request returns the Tax and Price of the product that is newly added. 
+For POST request, give the input in JSON format that includes Product Type,Quantity and Unit Price. 
 
 ### DELETE Endpoint
 ```
