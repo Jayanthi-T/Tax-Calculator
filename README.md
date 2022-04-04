@@ -42,6 +42,7 @@ This GET request displays all the products available in the database in JSON for
 ```
 localhost:8080/products/new
 ```
+This POST request displays the tax and price of each product that is newly added.
 For POST request, give the input in JSON format that includes Product Type,Quantity and Unit Price. 
 
 ### DELETE Endpoint
