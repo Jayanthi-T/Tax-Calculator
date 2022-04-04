@@ -36,6 +36,8 @@ The rounding rulesfor sales tax are that for a tax rate of n%, a shelf price of 
 ```
 localhost:8080/products
 ```
+This GET request displays all the products available in the database.
+
 ### POST Endpoint
 ```
 localhost:8080/products/new
@@ -46,16 +48,20 @@ This POST request returns the Tax and Price of the product that is newly added.
 ```
 localhost:8080/products/{id}
 ```
+This DELETE request deletes the product with the particular id and returns the message "Deleted the Product successfully!".
+If a product with the specified id doesn't exits, then returns a message like "No such Product to delete from your bill!".
 
 ### GET Endpoint to Calculate the Total Price
 ```
 localhost:8080/TotalPrice
 ```
+This GET request displays the Total Price of the products bought.
 
 ### GET Endpoint to Calculate the Total Tax
 ```
 localhost:8080/TotalTax
 ```
+This GET request displays the Total Tax of the products bought.
 
 ## Author
 
