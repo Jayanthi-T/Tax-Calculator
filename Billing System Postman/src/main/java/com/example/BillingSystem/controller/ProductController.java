@@ -31,12 +31,6 @@ public class ProductController {
         return productService.saveProduct(productList);
     }
 
-    @PostMapping("/products")
-    public ProductList saveProduct(@RequestBody ProductList productList) {
-        return productService.saveProduct(productList);
-    }
-
-
     @GetMapping("/TotalPrice")
     public Double CalcTotalPrice(){
         return productService.calculateTotalPrice();
