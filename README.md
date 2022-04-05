@@ -41,7 +41,7 @@ This GET endpoint displays all the products available in the database in JSON fo
 ```
 POST  /products/new
 ```
-For POST request, give the input in JSON format that includes Product Type,Quantity and Unit Price. 
+Give the input in JSON format that includes Product Type,Quantity and Unit Price. 
 
 ```
 {
