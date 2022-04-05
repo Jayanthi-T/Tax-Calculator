@@ -1,6 +1,6 @@
-# Tax-Calculator-in-Spring-Boot-and-Postman
+# Tax Calculator
 
-# Billing System : Tax Problem in Spring Boot, tested using Postman
+# Billing System : The Tax Problem 
 
 Calculate and apply basic sales tax for the products sold in a departmental store.
 
@@ -17,52 +17,57 @@ The rounding rulesfor sales tax are that for a tax rate of n%, a shelf price of 
 
 ### Dependencies
 
-* IntelliJ IDEA as IDE
-* MySQL workbench
-* Postman for testing the endpoints
+* Java 15.0.3
+* MySQL 8.0.27
+* Spring Web
+* Spring Data JPA
+* MySQL Driver
+* Spring Boot Devtools
 
-### Installing and Modifications
+### Running the Project
 
-* Clone the "Billling System Postman" folder
 * Change the sql username and password in "application.properties" according to your mysql installation
+* Run the BillingSystemApplication.java class as spring boot application
 
-### Executing the Program
+### Endpoints 
+#### GET
+```
+GET  /products
+```
+This GET endpoint displays all the products available in the database in JSON format.
 
-* Open the project in IDE
-* Now run the project as spring boot application
-* Go to Postman and test the endpoints
-
-### GET Endpoint 
 ```
-localhost:8080/products
+POST  /products/new
 ```
-This GET request displays all the products available in the database in JSON format.
-
-### POST Endpoint
-```
-localhost:8080/products/new
-```
-This POST request displays the tax and price of each product that is newly added.
 For POST request, give the input in JSON format that includes Product Type,Quantity and Unit Price. 
 
-### DELETE Endpoint
 ```
-localhost:8080/products/{id}
+{
+    "productType" : "book",
+    "quantity" : 5,
+    "unitPrice" : 21.33
+}
 ```
-This DELETE request deletes the product with the particular id and returns the message "Deleted the Product successfully!".
+
+This POST endpoint displays the tax and price of each product that is newly added.
+
+```
+DELETE  /products/{id}
+```
+This DELETE endpoint deletes the product with the particular id and returns the message "Deleted the Product successfully!".
 If a product with the specified id doesn't exits, then returns a message like "No such Product to delete from your bill!".
 
-### GET Endpoint to Calculate the Total Price
 ```
-localhost:8080/TotalPrice
+/TotalPrice
 ```
 This GET request displays the Total Price of the products bought.
 
-### GET Endpoint to Calculate the Total Tax
 ```
-localhost:8080/TotalTax
+/TotalTax
 ```
 This GET request displays the Total Tax of the products bought.
+
+
 
 ## Author
 
