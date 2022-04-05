@@ -74,6 +74,12 @@ This GET request displays the Total Tax of the products bought.
 
 ## Architectural Overview
 
+* ProductController class inside the controller package is responsible for handling all the endpoints.
+* ProductList class inside the entity package is the entity class that creates tables and columns according to our needs.
+* ProductRepository in the repository package extends CrudRepository that helps us in carrying out database operations.
+* ProductService interface inside the service package defines some methods that we will be using and ProductServiceImpl class implements the ProductService interface and holds the business logic of the project.
+* BillingSystemApplication is the main class of the spring boot project.
+
 ## Author
 
 Jayanthi-T
