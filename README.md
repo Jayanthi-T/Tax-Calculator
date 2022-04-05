@@ -30,12 +30,14 @@ The rounding rulesfor sales tax are that for a tax rate of n%, a shelf price of 
 * Run the BillingSystemApplication.java class as spring boot application
 
 ### Endpoints 
+
 #### GET
 ```
 GET  /products
 ```
 This GET endpoint displays all the products available in the database in JSON format.
 
+#### POST
 ```
 POST  /products/new
 ```
@@ -51,23 +53,26 @@ For POST request, give the input in JSON format that includes Product Type,Quant
 
 This POST endpoint displays the tax and price of each product that is newly added.
 
+#### DELETE
 ```
 DELETE  /products/{id}
 ```
 This DELETE endpoint deletes the product with the particular id and returns the message "Deleted the Product successfully!".
 If a product with the specified id doesn't exits, then returns a message like "No such Product to delete from your bill!".
 
+#### GET
 ```
-/TotalPrice
+GET  /TotalPrice
 ```
 This GET request displays the Total Price of the products bought.
 
+#### GET
 ```
-/TotalTax
+GET  /TotalTax
 ```
 This GET request displays the Total Tax of the products bought.
 
-
+## Architectural Overview
 
 ## Author
 
